@@ -1,5 +1,6 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
@@ -44,7 +45,8 @@ nav {
     to(rgba(19, 19, 19, 0.8))
   );
   /* background-: linear-gradient(linear, center top, center bottom, from(rgba(77, 77, 77, 0.9)), to(rgba(19, 19, 19, 0.8))); */
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.4);
   position: sticky;
   position: -webkit-sticky;
   top: 0;
@@ -133,12 +135,18 @@ nav {
   border-radius: 0px 0px 25px 25px;
   display: inline-block;
   vertical-align: middle;
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   position: relative;
   overflow: hidden;
+  -webkit-transition-property: color;
+  -o-transition-property: color;
   transition-property: color;
-  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 .menu li a:before {
   content: "";
@@ -156,24 +164,42 @@ nav {
     to(var(--color2))
   ); /* rgba(255, 166, 0, 0.568); */
   border-radius: 100%;
-  transform: scale(0);
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: transform;
   transition-property: transform;
-  transition-duration: 0.6s;
-  transition-timing-function: ease-out;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.6s;
+       -o-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transition-timing-function: ease-out;
+       -o-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
 }
 .menu li a:hover:before {
-  transform: scale(2);
+  -webkit-transform: scale(2);
+      -ms-transform: scale(2);
+          transform: scale(2);
 }
 .menu > li > ul > li > label {
   border-radius: 0px 0px 25px 25px;
   display: inline-block;
   vertical-align: middle;
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   position: relative;
   overflow: hidden;
+  -webkit-transition-property: color;
+  -o-transition-property: color;
   transition-property: color;
-  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 .menu > li > ul > li > label:before {
   content: "";
@@ -191,13 +217,25 @@ nav {
     to(var(--color2))
   ); /* rgba(255, 166, 0, 0.568); */
   border-radius: 100%;
-  transform: scale(0);
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: transform;
   transition-property: transform;
-  transition-duration: 0.6s;
-  transition-timing-function: ease-out;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.6s;
+       -o-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transition-timing-function: ease-out;
+       -o-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
 }
 .menu > li > ul > li > label:hover:before {
-  transform: scale(2);
+  -webkit-transform: scale(2);
+      -ms-transform: scale(2);
+          transform: scale(2);
 }
 
 /* ///////////////////////////////////////////////////////////////////////////// */
@@ -241,7 +279,8 @@ nav {
   overflow: hidden;
   width: 100%;
   /* top: 56px; */
-  box-shadow: 0px 6px 4px 2px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 6px 4px 2px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 6px 4px 2px rgba(0, 0, 0, 0.4);
 }
 .menu > li > ul > li {
   float: none;
@@ -296,6 +335,8 @@ white-space: nowrap;
   border-radius: 0 0 10px 10px;
   opacity: 1;
   height: auto;
+  -webkit-transition: height 0.5s, opacity 0.5s ease;
+  -o-transition: height 0.5s, opacity 0.5s ease;
   transition: height 0.5s, opacity 0.5s ease;
 }
 .menu > li:nth-child(6):hover > a > span {
@@ -305,15 +346,23 @@ white-space: nowrap;
   opacity: 0;
 }
 .menu > li:nth-child(6) > a > span {
+  -webkit-transition: opacity 1s;
+  -o-transition: opacity 1s;
   transition: opacity 1s;
 }
 .menu > li:nth-child(3) > a > span {
+  -webkit-transition: opacity 1s;
+  -o-transition: opacity 1s;
   transition: opacity 1s;
 }
 .menu > li:nth-child(6) > a > span {
+  -webkit-transition: opacity 1s;
+  -o-transition: opacity 1s;
   transition: opacity 1s;
 }
 .menu > li:nth-child(3) > a > span {
+  -webkit-transition: opacity 1s;
+  -o-transition: opacity 1s;
   transition: opacity 1s;
 }
 /*////////////////////////////////////////// Persistant Hover State //////////////////////////////////////////*/
@@ -350,7 +399,11 @@ white-space: nowrap;
 }
 
 .togglelabel > label {
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  -o-transition: transform 0.25s;
   transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
   color: rgba(0, 0, 0, 0.8);
 }
 
@@ -386,7 +439,9 @@ white-space: nowrap;
   }
   #togglecheckbox:checked + div > label {
     color: rgba(255, 255, 255, 0.9);
-    transform: rotateZ(90deg);
+    -webkit-transform: rotateZ(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotateZ(90deg);
     background-color: rgba(0, 0, 0, 0.3);
   }
   nav {
@@ -461,14 +516,20 @@ white-space: nowrap;
     font-size: 30px;
   }
   .menu li a:before {
-    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+         -o-transition-duration: 0.2s;
+            transition-duration: 0.2s;
   }
   .menu > li > ul > li > label:before {
-    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+         -o-transition-duration: 0.2s;
+            transition-duration: 0.2s;
   }
   .menu {
     height: 0;
     overflow: hidden;
+    -webkit-transition: height 1s cubic-bezier(0.23, 1, 0.32, 1);
+    -o-transition: height 1s cubic-bezier(0.23, 1, 0.32, 1);
     transition: height 1s cubic-bezier(0.23, 1, 0.32, 1);
     background: -webkit-gradient(
       linear,
@@ -492,6 +553,10 @@ white-space: nowrap;
   float: left;
   position: relative;
   height: auto;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.25)), to(rgba(0, 0, 0, 0.4))),
+    url("../img/bg1.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.4)),
+    url("../img/bg1.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.4)),
     url("../img/bg1.jpg");
 
@@ -599,7 +664,8 @@ white-space: nowrap;
   padding: 10px;
   color: var(--color1);
   font-size: 1.25em;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .tm-gallery-item figure figcaption {
@@ -608,9 +674,16 @@ white-space: nowrap;
   left: 0;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .tm-gallery-item figure figcaption > a {
@@ -653,30 +726,19 @@ figure.effect-bubba {
 
 .effect-bubba img {
   opacity: 1;
+  -webkit-transition: -webkit-filter 2s;
+  transition: -webkit-filter 2s;
+  -o-transition: filter 2s;
   transition: filter 2s;
+  transition: filter 2s, -webkit-filter 2s;
 }
+
 
 figure.effect-bubba:hover img {
-  /* opacity: 0.6; */
-  filter: blur(5px);
-}
 
-.effect-bubba figcaption::before,
-.effect-bubba figcaption::after {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
-  border-radius: 20px;
-  content: "";
-  opacity: 0;
-  transition: opacity 2s, transform 2s;
-}
-
-figure.effect-bubba:hover img {
   opacity: 0.2;
-  filter: blur(5px);
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
 }
 
 .effect-bubba figcaption::before,
@@ -690,34 +752,63 @@ figure.effect-bubba:hover img {
   border-radius: 20px;
   content: "";
   opacity: 0;
+ 
+  -webkit-transition: opacity 2s, -webkit-transform 2s;
+ 
+  transition: opacity 2s, -webkit-transform 2s;
+ 
+  -o-transition: opacity 2s, transform 2s;
+ 
   transition: opacity 2s, transform 2s;
+ 
+  transition: opacity 2s, transform 2s, -webkit-transform 2s;
 }
 figure.effect-bubba figcaption::before {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  transform: scale(0, 1);
+ 
+  -webkit-transform: scale(0, 1);
+ 
+      -ms-transform: scale(0, 1);
+ 
+          transform: scale(0, 1);
 }
 
 figure.effect-bubba figcaption::after {
   border-right: 1px solid #fff;
   border-left: 1px solid #fff;
-  transform: scale(1, 0);
+  
+  -webkit-transform: scale(1, 0);
+  
+      -ms-transform: scale(1, 0);
+  
+          transform: scale(1, 0);
 }
 
 figure.effect-bubba h2 {
   font-size: 1.5rem;
   margin-bottom: 20px;
   opacity: 0;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
   transition: transform 1s;
-  transform: translate3d(0, -30px, 0);
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform: translate3d(0, -30px, 0);
+          transform: translate3d(0, -30px, 0);
 }
 
 figure.effect-bubba p {
   width: 100%;
   padding: 20px;
   opacity: 0;
+  -webkit-transition: opacity 3s, -webkit-transform 3s;
+  transition: opacity 3s, -webkit-transform 3s;
+  -o-transition: opacity 3s, transform 3s;
   transition: opacity 3s, transform 3s;
-  transform: translate3d(0, 340px, 0);
+  transition: opacity 3s, transform 3s, -webkit-transform 3s;
+  -webkit-transform: translate3d(0, 340px, 0);
+          transform: translate3d(0, 340px, 0);
   color: white;
   
 }
@@ -725,13 +816,16 @@ figure.effect-bubba p {
 figure.effect-bubba:hover figcaption::before,
 figure.effect-bubba:hover figcaption::after {
   opacity: 1;
-  transform: scale(1);
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 
 figure.effect-bubba:hover h2,
 figure.effect-bubba:hover p {
   opacity: 1;
-  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 
 .O-sliderElements,
@@ -766,6 +860,8 @@ figure.effect-bubba:hover p {
   left: 0;
   width: 500%;
   padding: 0;
+  -webkit-transition: left 1.5s ease-in-out;
+  -o-transition: left 1.5s ease-in-out;
   transition: left 1.5s ease-in-out;
   margin-top: 60px;
 }
@@ -950,14 +1046,22 @@ figure.effect-bubba:hover p {
 /* ///////////////////////////  Teacher Section ////////////////////////////////////////////// */
 
 .container-teachers {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 
   background-size: cover;
   height: auto;
-  flex-basis: 100%;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .images {
@@ -981,9 +1085,15 @@ figure.effect-bubba:hover p {
 .images *,
 .images *:before,
 .images *:after {
+
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+
+          box-sizing: border-box;
+
   -webkit-transition: all 0.55s ease;
+
+  -o-transition: all 0.55s ease;
+
   transition: all 0.55s ease;
 }
 
@@ -1013,14 +1123,16 @@ figure.effect-bubba:hover p {
   top: 0;
   left: 10px;
   -webkit-transform: translateX(100%);
-  transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 .title:after {
   bottom: 0;
   right: 10px;
   -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 .title div:before,
@@ -1036,14 +1148,16 @@ figure.effect-bubba:hover p {
   top: 10px;
   right: 0;
   -webkit-transform: translateY(100%);
-  transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 .title div:after {
   bottom: 10px;
   left: 0;
   -webkit-transform: translateY(-100%);
-  transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 h2,
@@ -1084,7 +1198,6 @@ p {
 .images.hover img {
   zoom: 1;
   filter: alpha(opacity=35);
-  -webkit-opacity: 0.35;
   opacity: 0.35;
 }
 
@@ -1097,52 +1210,41 @@ p {
 .images:hover .title div:after,
 .images.hover .title div:after {
   -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .images:hover .title:before,
 .images.hover .title:before,
 .images:hover .title:after,
 .images.hover .title:after {
+
   -webkit-transition-delay: 0.15s;
-  transition-delay: 0.15s;
+
+       -o-transition-delay: 0.15s;
+
+          transition-delay: 0.15s;
 }
 
 .images:hover figcaption,
 .images.hover figcaption {
   opacity: 1;
+
   -webkit-transition-delay: 0.2s;
-  transition-delay: 0.2s;
+
+       -o-transition-delay: 0.2s;
+
+          transition-delay: 0.2s;
 }
 @media (max-width: 820px) {
   .container-teachers {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
-/* .gridContainer div span::before{
-    content: "";
-    width: 40vw;
-    height: 4px;
-    border-radius: 25%;
-    background-color: #444;
-    display: block;
-    top: 16px;
-    right: 58vw;
-    position: absolute;
 
-}
-.gridContainer div span::after{
-  content: "";
-  width: 40vw;
-  height: 4px;
-  border-radius: 25%;
-  background-color: #444;
-  display: block;
-  top: 16px;
-  left: 58vw;
-  position: absolute;
-}
-*/
 @media only screen and (max-width: 820px) {
   .tm-gallery-item {
     margin-left: 0;
