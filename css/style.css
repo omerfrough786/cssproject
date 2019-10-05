@@ -4,11 +4,13 @@
   padding: 0;
   border: 0;
   font-size: 100%;
+  
 }
 :root {
   --color1: #dcd8cf;
   --color2: #e25d33;
   --color3: #282827;
+  --test: rgb(255, 0, 0);
 }
 /* ////////////////////////////////navbar////////////////////////////// */
 html {
@@ -34,6 +36,7 @@ table {
 }
 
 nav {
+  
   font-family: "Droid Sans", sans-serif;
   background: -webkit-gradient(
     linear,
@@ -104,17 +107,13 @@ nav {
 .menu > li > a > p:first-child {
   display: inline-block;
 }
-.menu>li:nth-child(6)>a>p>span{
-  font-size: 22px;
-  color: var(--color2);
-  font-weight: bolder;
-  }
-  
-  .menu>li:nth-child(3)>a>span{
-   font-size: 22px;
-   color: var(--color2);
-    font-weight: bolder;
-  }
+.menu > li:nth-child(6) > a > p > span {
+  font-size: 25px;
+}
+
+.menu > li:nth-child(3) > a > span {
+  font-size: 25px;
+}
 .menu > li > a {
   color: var(--color1);
   display: inline-block;
@@ -167,32 +166,37 @@ nav {
 .menu li a:hover:before {
   transform: scale(2);
 }
-.menu>li>ul>li>label{
-border-radius: 0px 0px 25px 25px;
-display: inline-block;
-vertical-align: middle;
-transform: perspective(1px) translateZ(0);
-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-position: relative;
-overflow: hidden;
-transition-property: color;
-transition-duration: 0.3s;
-font-weight: bold;
+.menu > li > ul > li > label {
+  border-radius: 0px 0px 25px 25px;
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+  transition-property: color;
+  transition-duration: 0.3s;
 }
-.menu>li>ul>li>label:before {
-content: "";
-position: absolute;
-z-index: -1;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background:-webkit-gradient(linear, center top, center bottom, from(rgba(251, 213, 142, 0.8)), to(var(--color2))); /* rgba(255, 166, 0, 0.568); */
-border-radius: 100%;
-transform: scale(0);
-transition-property: transform;
-transition-duration: 0.6s;
-transition-timing-function: ease-out;
+.menu > li > ul > li > label:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: -webkit-gradient(
+    linear,
+    center top,
+    center bottom,
+    from(rgba(251, 213, 142, 0.8)),
+    to(var(--color2))
+  ); /* rgba(255, 166, 0, 0.568); */
+  border-radius: 100%;
+  transform: scale(0);
+  transition-property: transform;
+  transition-duration: 0.6s;
+  transition-timing-function: ease-out;
 }
 .menu > li > ul > li > label:hover:before {
   transform: scale(2);
@@ -205,48 +209,43 @@ transition-timing-function: ease-out;
 /* .menu>li:nth-child(6){
     width: auto;
 } */
-.menu>li>ul>li>a{
-	color: var(--color1);
-    display: inline-block;
-	width: 9vw;
-	font-size: 18px;
+.menu > li > ul > li > a {
+  color: var(--color1);
+  display: inline-block;
+  width: 100%;
+  font-size: 18px;
   padding-left: 12px;
   padding-right: 12px;
-	padding-top: 16px;
-	padding-bottom: 16px;
-	/* vertical-align: middle; */
-    text-decoration: none;
-	/* position: relative; */
-	text-transform: none;
-    text-align: center;	
-    font-weight: bold;
-   
+  padding-top: 16px;
+  padding-bottom: 16px;
+  /* vertical-align: middle; */
+  text-decoration: none;
+  /* position: relative; */
+  text-transform: none;
+  text-align: center;
 }
-.menu>li>ul>li>label{
-	 color: var(--color1);
-  display:  block;
+.menu > li > ul > li > label {
+  color: var(--color1);
+  display: block;
   font-size: 18px;
-  width: 9vw;
-    /* width: 10vw; */
-	padding-top: 16px;
-	padding-bottom: 16px;
-	/* vertical-align: middle; */
-    text-decoration: none;
-	position: relative;
-	text-transform: none;
-	text-align: center;	
-}
-.menu>li>ul {
-
-   position: absolute;  /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
-   overflow: hidden;
-
-    /* top: 56px; */
-    box-shadow: 0px 6px 4px 2px rgba(0,0,0,0.4);
-    
-}
-.menu>li>ul>li{
+  width: 12vw;
+  /* width: 10vw; */
+  padding-top: 16px;
+  padding-bottom: 16px;
+  /* vertical-align: middle; */
+  text-decoration: none;
   position: relative;
+  text-transform: none;
+  text-align: center;
+}
+.menu > li > ul {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  /* top: 56px; */
+  box-shadow: 0px 6px 4px 2px rgba(0, 0, 0, 0.4);
+}
+.menu > li > ul > li {
   float: none;
   display: list-item;
 }
@@ -276,10 +275,14 @@ transition-timing-function: ease-out;
 
 /* .menu ul li {
 float: none;
+
 } */
 
 /* .menu ul a {
 white-space: nowrap;
+
+
+
 }
 */
 /*//////////////////////////// Displays the dropdown on hover and moves back into position////////////////////////// */
@@ -323,6 +326,7 @@ white-space: nowrap;
 /* .menu li:hover{
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.178);
     background-color: rgba(255, 166, 0, 0.568);
+
 } */
 
 .menu li:hover ul a {
@@ -359,12 +363,13 @@ white-space: nowrap;
 #navContainer {
   position: absolute;
   background-color: rgba(0, 0, 0, 1);
-  height: auto;
+  height: 100vh;
 }
 /*//////////////////////////// media querry///////////////////////////////// */
-@media (max-width: 820px) {
+@media (max-width: 999px) {
   .togglelabel {
     display: block;
+    
   }
   #togglecheckbox:checked ~ .menu {
     height: auto;
@@ -377,6 +382,7 @@ white-space: nowrap;
     position: relative;
     background-color: var(--color3);
     z-index: 101;
+    
   }
   #togglecheckbox:checked + div > label {
     color: rgba(255, 255, 255, 0.9);
@@ -408,7 +414,7 @@ white-space: nowrap;
     float: none;
   }
   .menu li {
-    width: 100%;
+    width: 100vw;
     height: auto;
   }
   .menu > li > ul {
@@ -439,7 +445,7 @@ white-space: nowrap;
     float: none;
   }
   .menu li {
-    width: 100%;
+    width: 100vw;
     height: auto;
   }
   .menu li ul li {
@@ -501,7 +507,7 @@ white-space: nowrap;
   background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.4)),
     url("../img/bg1.jpg");
 
-  width: 100%;
+  width: 100vw;
 
   background-repeat: no-repeat;
   background-size: cover;
