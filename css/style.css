@@ -48,7 +48,7 @@ nav {
   -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.4);
   position: sticky;
-  position: -webkit-sticky;
+  /*position: -webkit-sticky;*/
   top: 0;
   /*  left: 20px; */
   z-index: 100;
@@ -725,12 +725,12 @@ figure.effect-bubba {
 }
 
 .effect-bubba img {
+  -webkit-opacity: 1;
   opacity: 1;
-  -webkit-transition: -webkit-filter 2s;
-  transition: -webkit-filter 2s;
-  -o-transition: filter 2s;
+  -webkit-transition: filter 2s;
   transition: filter 2s;
-  transition: filter 2s, -webkit-filter 2s;
+  -o-transition: filter 2s;
+ 
 }
 
 
@@ -753,11 +753,15 @@ figure.effect-bubba:hover img {
   content: "";
   opacity: 0;
  
-  -webkit-transition: opacity 2s, transform 2s;
+ -webkit-transition: opacity 2s, transform 2s;
  
   transition: opacity 2s, transform 2s;
  
   -o-transition: opacity 2s, transform 2s;
+ 
+  transition: opacity 2s, transform 2s;
+ 
+  transition: opacity 2s, transform 2s;
 
 }
 figure.effect-bubba figcaption::before {
@@ -812,6 +816,7 @@ figure.effect-bubba p {
 
 figure.effect-bubba:hover figcaption::before,
 figure.effect-bubba:hover figcaption::after {
+  -webkit-opacity: 1;
   opacity: 1;
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
@@ -820,6 +825,7 @@ figure.effect-bubba:hover figcaption::after {
 
 figure.effect-bubba:hover h2,
 figure.effect-bubba:hover p {
+  -webkit-opacity: 1;
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
