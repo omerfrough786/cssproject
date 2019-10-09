@@ -507,7 +507,7 @@ white-space: nowrap;
   background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.4)),
     url("../img/bg1.jpg");
 
-  width: 100vw;
+  width: 100%;
 
   background-repeat: no-repeat;
   background-size: cover;
